@@ -1,0 +1,14 @@
+syntax = "proto3";
+option go_package = ".";
+
+message Employee {
+    uint64 id = 1;
+    string username = 2;
+    optional string password = 3; // Hashed
+    string profileImage = 4;
+    float salary = 5;
+}
+
+message Employees {
+    repeated Employee employees = 1;
+}
